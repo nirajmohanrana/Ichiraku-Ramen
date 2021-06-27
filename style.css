@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  font-size: 16px;
+  font-family: "Poppins";
+  --copper: #cc8a71;
+  --ming: #246a73;
+  --dark-cyan: #368f8b;
+  --champagne: #f3dfc1;
+  --desert-sand: #ddbea8;
+  --black: #23232e;
+  --black2: #23232e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--desert-sand);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--ming);
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--black2);
+  transition: width 600ms ease;
+  width: 5rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  text-decoration: none;
+  padding: 2.5rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 5rem;
+}
+
+.nav-link,
+.nav-logo {
+  text-decoration: none;
+  transition: all 600ms ease;
+}
+
+.nav-link {
+  display: flex;
+}
+
+.logo {
+  flex: auto;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 100%;
+  transition: all 600ms ease;
+}
+
+.logo a img {
+  width: 100%;
+}
+
+.link-text {
+  display: none;
+  color: white;
+  margin-left: 1rem;
+  position: absolute;
+  margin-left: 4rem;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+  width: 10rem;
+  transform: scale(0%);
+}
+
+.lg2 {
+  font-size: 2rem;
+  padding: 1rem;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    color: var(--copper);
+    transform: scale(100%);
+    transition: all 600ms ease;
+  }
+
+  .navbar:hover .img-logo {
+    transform: translateX(5rem) translateY(5rem) scale(300%);
+    transition: all 600ms ease;
+  }
+
+  .navbar:hover .lg2{
+    color: var(--copper);
+  }
+}
