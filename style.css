@@ -194,6 +194,10 @@ main {
   display: block;
 }
 
+.ramen-img img {
+  height: 19rem;
+}
+
 .ramen-name {
   padding: 1rem 0.5rem;
 }
@@ -222,15 +226,23 @@ main {
   background-color: var(--desert-sand);
 }
 
+.notFound {
+  grid-template-columns: 1fr!important;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
 .ramen-details {
   position: fixed;
   text-align: center;
-  top: 5rem;
-  /* left: 50%;f */
+  top: 3rem;
   background: var(--ming);
   border-radius: 1rem;
   overflow-y: scroll;
-  /* display: ; */
+  display: none;
+  height: 90%;
   padding: 2rem 0;
 }
 
@@ -288,7 +300,7 @@ main {
 }
 
 .ramen-instruct {
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 
 .ramen-recipe-img img {
