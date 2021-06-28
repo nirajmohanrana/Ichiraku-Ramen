@@ -45,6 +45,7 @@ main {
   background-color: var(--black2);
   transition: width 250ms ease;
   width: 5rem;
+  z-index: 100;
 }
 
 .navbar-nav {
@@ -193,10 +194,6 @@ main {
   display: block;
 }
 
-.ramen-img img {
-  height: 200px;
-}
-
 .ramen-name {
   padding: 1rem 0.5rem;
 }
@@ -225,8 +222,100 @@ main {
   background-color: var(--desert-sand);
 }
 
-/* MEDIA QUERY */
+.ramen-details {
+  position: fixed;
+  text-align: center;
+  top: 5rem;
+  /* left: 50%;f */
+  background: var(--ming);
+  border-radius: 1rem;
+  overflow-y: scroll;
+  /* display: ; */
+  padding: 2rem 0;
+}
 
+.ramen-details::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.ramen-details::-webkit-scrollbar-track {
+  background: var(--desert-sand);
+}
+
+.ramen-details::-webkit-scrollbar-thumb {
+  background: var(--ming);
+}
+
+.showRamen{
+  display: block;
+}
+
+.ramen-details-content {
+  margin: 2rem;
+}
+
+.ramen-details-content p:not(.ramen-category) {
+  padding: 3rem 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1rem;
+  background: var(--copper);
+  color: var(--champagne);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+}
+
+.ramen-title {
+  letter-spacing: 0.2rem;
+  padding: 1rem 0;
+  color: var(--copper);
+  font-weight: bolder;
+}
+
+.ramen-category {
+  background-color: var(--champagne);
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.ramen-instruct {
+  padding: 1rem 0;
+}
+
+.ramen-recipe-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.ramen-link {
+  margin: 1rem 0;
+}
+
+.ramen-link a {
+  color: var(--champagne);
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 400ms ease-in-out;
+}
+
+.ramen-link:hover a {
+  opacity: 0.8;
+  color: var(--copper);
+}
+
+/* MEDIA QUERY */
 @media only screen and (max-width: 600px) {
   /* NAVBAR */
   .navbar {
@@ -274,10 +363,11 @@ main {
     margin: 0 2.5rem;
   }
 
-  .ramen-img img {
-    height: 220px;
+  .ramen-details {
+    width: 90%;
+    left: 2rem;
+    text-align: center;
   }
-
 }
 
 @media only screen and (min-width: 600px) {
@@ -313,5 +403,10 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+  }
+
+  .ramen-details {
+    width: 50%;
+    left: 30%;
   }
 }
