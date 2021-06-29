@@ -29,7 +29,28 @@
 
 .end-img {
     margin-top: 3rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     width: 60%;
     border-radius: 2rem;
+}
+
+.social {
+    font-size: 2rem;
+    background-color: #ddbea8;
+    width: 7rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.fa-github-square {
+    color: #2d333b;
+}
+
+.fa-discord {
+    color: #5865f2;
 }
