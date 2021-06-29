@@ -6,8 +6,8 @@ const closeBtn = document.getElementById('close-btn');
 //Event Listeners
 searchBtn.addEventListener('click', getRamenList);
 ramenList.addEventListener('click', getRamenRecipe);
-ramenCloseBtn.addEventListener('click', () => {
-    ramenDetailsContent.parentElement.parentElement.remove('showRamen');
+closeBtn.addEventListener('click', () => {
+    ramenDetailsContent.parentElement.classList.remove('showRamen');
 });
 //Ramen List matches with ingredient
 
@@ -55,6 +55,7 @@ function getRamenRecipe(e) {
 //create a modal
 function ramenRecipeModal(meal) {
     meal = meal[0];
+    ramenDetailsContent.parentElement.classList.add('showRamen');
     let html = `
         <div class="ramen-recipe-img">
             <img src="${meal.strMealThumb}" alt="">
@@ -70,5 +71,4 @@ function ramenRecipeModal(meal) {
         </div>
     `;
     ramenDetailsContent.innerHTML = html;
-    ramenDetailsContent.parentElement.classList.add('showRamen')
 }
